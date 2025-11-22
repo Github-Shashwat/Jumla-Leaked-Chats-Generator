@@ -1,115 +1,110 @@
-# Jumla-Leaked-Chats-Generator
-🎯 Jumla: The Satirical News Engine (Leaked Chats Generator)
-A Python-based AI tool that turns real news headlines into satirical, "leaked" WhatsApp conversations between fictional political caricatures.
+# 🎯 Jumla: The Satirical News Engine (Leaked Chats Generator)
 
-📖 About The Project
-Jumla is the first tool in a planned suite of AI-powered satirical applications.
+**A Python-based AI tool that turns real news headlines into satirical, "leaked" WhatsApp conversations between fictional political caricatures.**
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B) ![LangChain](https://img.shields.io/badge/LangChain-Powered-green) ![Status](https://img.shields.io/badge/Status-Prototype-orange)
+
+## 📖 About The Project
+
+**Jumla** is the first tool in a planned suite of AI-powered satirical applications.
 
 In the age of misinformation and spin, this tool takes a lighthearted approach to political commentary. It scrapes real-time news from major Indian news outlets, filters for "satire-worthy" controversies using AI, and generates a fake "leaked" WhatsApp chat.
 
 The chat features a recurring cast of fictionalized political archetypes (The Messiah, The Chanakya, The Firebrand, etc.) brainstorming how to spin the narrative, shift blame, or announce a ridiculous new "Masterstroke."
 
-Key Features
-📰 Real-Time News Integration: Fetches live RSS feeds from Google News, The Hindu, NDTV, and Indian Express.
+### Key Features
+* **📰 Real-Time News Integration:** Fetches live RSS feeds from Google News, The Hindu, NDTV, and Indian Express.
+* **🧠 AI Editorial Filter:** Uses an LLM to analyze headlines and discard boring news (sports, weather), keeping only political/controversial topics.
+* **🎭 Dynamic Personas:** Generates dialogue based on specific character archetypes (e.g., "Samit Shah" implies a ruthless strategist; "Mahendra Godi" speaks in slogans).
+* **🎛️ User Controls:** You decide the narrative parameters:
+    * **Blame Game:** Who is at fault? (Opposition, Foreign Hands, Nehru, etc.)
+    * **Nationalism Level:** From "Subtle" to "Over 9000."
+    * **Promise Tone:** Realistic promises vs. Wild Freebies.
+* **📱 Visual Interface:** Renders the output in a CSS-styled WhatsApp conversation format.
 
-🧠 AI Editorial Filter: Uses an LLM to analyze headlines and discard boring news (sports, weather), keeping only political/controversial topics.
+---
 
-🎭 Dynamic Personas: Generates dialogue based on specific character archetypes (e.g., "Samit Shah" implies a ruthless strategist; "Mahendra Godi" speaks in slogans).
+## 🛠️ Tech Stack
 
-🎛️ User Controls: You decide the narrative parameters:
+* **Frontend:** [Streamlit](https://streamlit.io/) (for the interactive UI).
+* **LLM Orchestration:** [LangChain](https://www.langchain.com/).
+* **Models Supported:**
+    * **Groq:** Llama-3.1-8b (Fast & Free tier friendly).
+    * **OpenAI:** GPT-3.5 Turbo.
+* **Data Fetching:** `feedparser` (RSS), `BeautifulSoup4` (HTML cleaning).
+* **Deployment/Tunneling:** `pyngrok` (for local testing).
 
-Blame Game: Who is at fault? (Opposition, Foreign Hands, Nehru, etc.)
+---
 
-Nationalism Level: From "Subtle" to "Over 9000."
+## 🚀 Getting Started
 
-Promise Tone: Realistic promises vs. Wild Freebies.
+### Prerequisites
 
-📱 Visual Interface: Renders the output in a CSS-styled WhatsApp conversation format.
+1.  **Python 3.8+** installed.
+2.  An API Key from either **[Groq](https://console.groq.com/)** (Recommended for speed) or **OpenAI**.
 
-🛠️ Tech Stack
-Frontend: Streamlit (for the interactive UI).
+### Installation
 
-LLM Orchestration: LangChain.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/jumla-satire-engine.git
+    cd Leaked chats generator
+    ```
 
-Models Supported:
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requiremnts.txt
+    ```
 
-Groq: Llama-3.1-8b (Fast & Free tier friendly).
+3.  **Run the Application:**
+    ```bash
+    streamlit run app.py
+    ```
 
-OpenAI: GPT-3.5 Turbo.
+---
 
-Data Fetching: feedparser (RSS), BeautifulSoup4 (HTML cleaning).
+## 🕹️ Usage Guide
 
-Deployment/Tunneling: pyngrok (for local testing).
+1.  **Select Provider:** Choose between Groq or OpenAI in the sidebar and paste your API key.
+2.  **Pick a Source:** Choose a news feed (e.g., "NDTV India").
+3.  **Scan for Topics:** Click **"Find Satirical Topics"**. The AI will read the news and present you with a dropdown of only the most "spinnable" stories.
+4.  **Set Parameters:**
+    * *Blame Target:* Who are we pinning this on today?
+    * *Sliders:* Adjust the intensity of the rhetoric.
+5.  **Generate:** Click **"Generate Satirical Chat"**.
+6.  **Enjoy:** Read the generated "leaked" conversation in the main window.
 
-🚀 Getting Started
-Prerequisites
-Python 3.8+ installed.
+---
 
-An API Key from either Groq (Recommended for speed) or OpenAI.
+## 🎭 The Cast (Personas)
 
-Installation
-Clone the repository:
-
-Bash
-
-git clone https://github.com/yourusername/jumla-satire-engine.git
-cd Leaked chats generator
-Install dependencies:
-
-Bash
-
-pip install -r requirements.txt
-Run the Application:
-
-Bash
-
-streamlit run app.py
-🕹️ Usage Guide
-Select Provider: Choose between Groq or OpenAI in the sidebar and paste your API key.
-
-Pick a Source: Choose a news feed (e.g., "NDTV India").
-
-Scan for Topics: Click "Find Satirical Topics". The AI will read the news and present you with a dropdown of only the most "spinnable" stories.
-
-Set Parameters:
-
-Blame Target: Who are we pinning this on today?
-
-Sliders: Adjust the intensity of the rhetoric.
-
-Generate: Click "Generate Satirical Chat".
-
-Enjoy: Read the generated "leaked" conversation in the main window.
-
-🎭 The Cast (Personas)
 The AI generates dialogue for the following fictional caricatures:
 
-Samit Shah: The ruthless strategist. Obsessed with election math and winning at all costs.
+* **Samit Shah:** The ruthless strategist. Obsessed with election math and winning at all costs.
+* **Jogi Raditya:** The firebrand. Believes the solution to everything is a bulldozer or a name change.
+* **S. Rajshankar:** The intellectual snob. Blames "Western Hypocrisy" and "International Plots" for everything.
+* **Nirmal Siyaraman:** The defensive economist. Expert at "Whataboutism" and disconnected from reality (e.g., "I don't eat onions").
+* **Mahendra Godi:** The messianic leader. Speaks only in third-person slogans and vague platitudes.
 
-Jogi Raditya: The firebrand. Believes the solution to everything is a bulldozer or a name change.
+---
 
-S. Rajshankar: The intellectual snob. Blames "Western Hypocrisy" and "International Plots" for everything.
+## ⚠️ Disclaimer & Ethics
 
-Nirmal Siyaraman: The defensive economist. Expert at "Whataboutism" and disconnected from reality (e.g., "I don't eat onions").
+> **This project is strictly for educational and entertainment purposes (Political Satire).**
 
-Mahendra Godi: The messianic leader. Speaks only in third-person slogans and vague platitudes.
+* The characters, though inspired by public figures, are fictional caricatures.
+* The "Chats" are generated by Artificial Intelligence and are **fake**.
+* This tool should not be used to spread misinformation or present these dialogues as factual events.
+* The creators do not endorse hate speech; the goal is to parody the *rhetoric* used in modern political discourse.
 
-⚠️ Disclaimer & Ethics
-This project is strictly for educational and entertainment purposes (Political Satire).
+---
 
-The characters, though inspired by public figures, are fictional caricatures.
+## 🗺️ Roadmap
 
-The "Chats" are generated by Artificial Intelligence and are fake.
+This is **Part 1** of the "Satire Suite." Future tools planned include:
 
-This tool should not be used to spread misinformation or present these dialogues as factual events.
+* **The Godi Media Headline Generator:** AI that rewrites bad news into positive "Masterstrokes."
+* **Twitter Bot Army Simulator:** Simulating how a trend is manufactured.
+* **The "Whataboutery" Engine:** An API that instantly finds a counter-argument from 70 years ago.
 
-The creators do not endorse hate speech; the goal is to parody the rhetoric used in modern political discourse.
-
-🗺️ Roadmap
-This is Part 1 of the "Satire Suite." Future tools planned include:
-
-The Godi Media Headline Generator: AI that rewrites bad news into positive "Masterstrokes."
-
-Twitter Bot Army Simulator: Simulating how a trend is manufactured.
-
-The "Whataboutery" Engine: An API that instantly finds a counter-argument from 70 years ago.
+---
